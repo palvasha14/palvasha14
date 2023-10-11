@@ -1,0 +1,86 @@
+
+<html>
+<head>
+
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div id="login-section" class="hidden">
+        <h1>Login</h1>
+        <form onsubmit="return login">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showRegistration()">Register here</a></p>
+    </div>
+
+
+	<div id="registration-section" class="hidden">
+        <h1>Register</h1>
+
+        <form onsubmit="return register()">
+            <input type="text" id="regUsername" placeholder="Username" required><br>
+            <input type="password" id="regPassword" placeholder="Password" required><br>
+            <input type="emailid" id="emailid" placeholder="emailid" required><br>
+            <input type="date" id="dateofbirth" placeholder="dateofbirth" required><br>
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    </div>
+	<div id="main-section" class="hidden">
+        <h1>Shopping Cart</h1>
+
+	<div class="products">
+        <div class="product">
+            <h2>shirt</h2>
+            <p>Price: $10</p>
+            <img scr="C:\Users\SPHN\Pictures\Saved Pictures\shirt1.jpg"height="100px"width="200px">
+            <button class="add-to-cart" onclick="addToCart('shirt', 10)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>jeans</h2>
+            <p>Price: $20</p>
+            <img scr="C:\Users\SPHN\Pictures\Saved Pictures\jeans.jpg"height="100"width="200">
+            <button class="add-to-cart" onclick="addToCart('jeans', 20)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>hoodie</h2>
+            <p>Price: $15</p>
+            <img scr="C:\Users\SPHN\Pictures\Saved Pictures\hoodie.jpg".height="100"width="200">
+            <button class="add-to-cart" onclick="addToCart('hoodie', 15)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>shoes</h2>
+            <p>Price: $25</p>
+            <img scr="C:\Users\SPHN\Pictures\Saved Pictures\shoes.jpg".height="100"width="200">
+            <button class="add-to-cart" onclick="addToCart('shoes', 25)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>watch</h2>
+            <p>Price: $30</p>
+            <img scr="C:\Users\SPHN\Pictures\Saved Pictures\watch.jpg".height="100"width="200">
+            <button class="add-to-cart" onclick="addToCart('watch', 30)">Add to Cart</button>
+        </div>
+    	</div>
+
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total">0</span></p>
+            <button onclick="checksout()">Checkout</button>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
